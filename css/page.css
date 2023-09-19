@@ -1,0 +1,336 @@
+
+/* Typography */
+:root{
+    font-size: 62.5%; /* 10px */
+}
+
+/* Color */
+
+:root{
+  --Font-color:#303030;
+  --Font-main: #161616;
+}
+/* Font */
+
+  /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;700;900&display=swap'); */
+  @font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'yg-jalnan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+  font-weight: bold;
+  font-style: bold;
+}
+
+/* Swiper */
+html,
+body {
+  position: relative;
+  height: 100%;
+  font-size: 1.6rem;
+  
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  font-family: 'S-CoreDream-3Light';
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 1.6rem;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* fr-page */
+.fr-page{
+    background: url(../images/bg-masthead.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  .typing-container {
+background-color: white;
+padding: 2rem;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.typing {
+font-size: 1.8rem;
+border-right: 2px solid #333;
+white-space: nowrap;
+overflow: hidden;
+animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+from {
+    width: 0;
+}
+to {
+    width: 100%;
+}
+}
+
+@keyframes blink-caret {
+from, to {
+    border-color: transparent;
+}
+50% {
+    border-color: #333;
+}
+}
+
+.arrow{
+  position: absolute;
+  animation: upDown 2s infinite linear alternate;
+  bottom: 10%;
+}
+.arrow img{
+ width: 2.4rem;
+ padding-top: 2rem;
+}
+.arrow::before{
+  position: absolute;
+  content: '';
+  width: 3rem;
+  height: 5rem;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@keyframes upDown{
+  from{transform: translateY(0px);}
+  to{transform: translateY(15px);}
+}
+
+
+/* se-page */
+/* 
+.about {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    
+}
+ .about h2{
+    text-align: center;
+    font-size: 6rem;
+    padding-bottom: 6.4rem;
+}
+  .about-inner{
+    width: 100%;
+    padding: 6.4rem 0;
+  }
+  .about-ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .about-ul>li{
+    width: 25%;
+  }
+  .about-ul img{
+    width: 6.4rem;
+  }
+  .i-inner{
+    padding: 3.2rem;
+    display: inline-block;
+  }
+  
+  .about-ul h3{
+    font-size: 2.4rem;
+    padding: 3.2rem 0 1.6rem;
+    color: #181818;
+  }
+  .about-ul p{
+    line-height: 2;
+    font-weight: 600;
+    color: #666;
+  }
+
+  .i-skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    justify-content: center;
+  } */
+
+  /* about */
+
+  .about-inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6.4rem;
+  }
+  .about-left,
+  .about-right{
+    width: 50%;
+    padding-top: 6rem;
+  }
+  .about-left h2{
+    position: absolute;
+    font-size: 5rem;
+    text-align: left;
+    top: 10%;
+    padding-top: 0;
+    border-bottom: 5px solid black;
+    line-height: 1.5;
+    padding-bottom: 2rem;
+  }
+  .about-right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 6rem;
+    position: relative;
+  }
+  .about-tittle{
+    position: absolute;
+    width: 90%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: left;
+    background: var(--Font-main);
+    padding-left: 2rem;
+    
+  }
+  .about-tittle h3{
+    font-family: 'yg-jalnan';
+    font-size: 2rem;
+    color: #fff;
+  }
+  .abinfo-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    text-align: left;
+  }
+
+  .abinfo-h li{
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--Font-main);
+    font-weight: 600;
+    padding: 2rem 0;
+  }
+  .abinfo-p li{
+    font-size: 2rem;
+    color:var(--Font-color);
+    padding: 2rem 0;
+  }
+
+  .abinfo-h{font-size: 2rem;}
+  .abinfo-bt h3{font-size: 2rem; padding-bottom: 2rem; color: var(--Font-main);}
+  .abinfo-bt p {font-size: 2rem; color: var(--Font-color);}
+ 
+  /* pf */
+  .pf-inner{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6.4rem;
+  }
+  .pf-left,
+  .pf-right{
+    width: 50%;
+    padding-top: 6rem;
+  }
+  .pf-left img{border-radius: 30px;}
+  .pf-right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 6rem;
+  }
+  .info-tittle{
+    position: absolute;
+    width: 70%;
+    top: 12rem;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: left;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #FC6719
+    
+  }
+  .info-tittle h3{
+    font-family: 'yg-jalnan';
+    font-size: 4rem;
+    color: #FC6719;
+    letter-spacing: -2px;
+  }
+  .info-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    text-align: left;
+  }
+  /* .info-h,
+  .info-p{
+    width: 50%;
+  } */
+  .info-h li{
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--Font-main);
+    font-weight: 600;
+    padding: 2rem 0;
+  }
+  .info-p li{
+    font-size: 2rem;
+    color:var(--Font-color);
+    padding: 2rem 0;
+  }
+  /* .info-h li:nth-child(2),
+  .info-p li:nth-child(2){padding: 4rem 0;} */
+  .info-h{font-size: 2rem;}
+  .info-bt h4{font-size: 2rem; padding-bottom: 2rem; color: var(--Font-main);}
+  .info-bt p {font-size: 2rem; color: var(--Font-color);}
+/* PC : 윈도우 사이즈 1024px 이상인 경우 적용 */
+@media screen and (min-width:1024px) {
+
+}
+
+/* 태블릿 : 윈도우 사이즈 768px ~ 1023px 사이인 경우 적용 */
+@media screen and (min-width:768px) and (max-width: 1023px){
+
+}
+
+/* 모바일 : 윈도우 사이즈 0px ~ 767px 사이인 경우 적용 */
+@media screen and (max-width:767px){
+
+}
